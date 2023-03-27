@@ -1,0 +1,43 @@
+@media screen and (max-width: 760px) {
+    h3 {
+        font-size: 1.2em;
+        line-height: 20px;
+    }
+    
+    h1 {
+        font-size: 2.5em;
+        margin: 20px 0px 10px 0px;
+    }
+
+    .cursos-e-certificacoes {
+        margin-top: 30px;
+        margin-bottom: -5px;
+    }
+
+    p, li {
+        font-size: 1.2em;
+    }
+}
+
+@media screen and (max-width: 1135px) {
+    main {
+        flex-direction: column;
+        margin: 0px 20px 0px 20px;
+    }
+    
+    section {
+        margin: auto;
+    }
+
+    .left-main, .right-main {
+        width: 100%;
+    }
+
+    .left-main > section, .right-main > section, p {
+        margin: auto;
+    }
+
+    .header-content {
+        width: 90%;
+    }
+}
