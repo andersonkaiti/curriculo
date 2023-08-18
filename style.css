@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+:root {
+    --azul: #0055a4;
+}
+
+/* HEADER */
+header {
+    padding: 1em 1em;
+    background-color: var(--azul);
+    color: #fff;
+}
+
+.header-img img { /* altera a imagem */
+    margin: 1em;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+.header-menu { /* centraliza o menu contendo as minhas informações */
+    display: flex;
+    margin: auto;
+    max-width: 800px;
+    align-items: center;
+}
+
+.header-menu nav ol { /* retira a ordenação e aumenta a fonte para 1.5em */
+    list-style-type: none;
+    font-size: 1.5em;
+}
+
+.header-menu nav ol li:first-child { /* configura o primeiro elemento da lista */
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.header-menu nav ol li:nth-child(2) { /* configura o segundo elemento da lista */
+    font-size: .8em;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#github { /* altera o hyperlink do GitHub */
+    text-decoration: none;
+    color: #fff;
+}
+
+.header-menu hr { /* altera o estilo do hr */
+    border-style: dashed;
+}
+/* FIM DO HEADER */
+
+/* MAIN */
+main {
+    padding: 1em 1em;
+    max-width: 800px;
+    margin: auto;
+}
+
+h1 { /* estiliza todos os h1s */
+    background-color: var(--azul);
+    color: #fff;
+    width: 100%;
+    padding: .1em .8em;
+    margin: .8em 0;
+    font-family: 'Arimo', sans-serif;
+    letter-spacing: 3px;
+}
+
+p { /* estiliza todos os parágrafos */
+    text-indent: 30px;
+    text-align: justify;
+    font-size: 1.2em;
+}
+
+/* retira os pontos da lista e altera o tamanho da fonte */
+#tech-ab li, #courses-cert li, #projetos-extensao li {
+    list-style-type: none;
+    font-size: 1.2em;
+    
+}
+
+/* empurra toda a lista para a direita */
+#tech-ab ol, #courses-cert ul, #projetos-extensao ul {
+    padding-left: 3em;
+}
+
+/* altera o hyperlink da seção projetos de extensão */
+#projetos-extensao a {
+    text-decoration: none;
+    color: var(--azul);
+    font-weight: bold;
+}
+
+/* estiliza a tag dd para o texto ir para cima */
+dd {
+    color: var(--azul);
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+
+strong, b {
+    color: var(--azul);
+}
+
+/* classe que contém todas as listas */
+/* ela tem um position relative para ser o pai de .line::before */
+.line {
+    position: relative;
+}
+
+/* filha da classe line */
+/* tem position: absolute e adiciona uma linha azul à esquerda da lista com 100% de altura */
+.line::before {
+    content: " ";
+    background-color: var(--azul);
+    width: 4px;
+    height: 100%;
+    position: absolute;
+    left: 2em;
+}
+
+/* faz pequenas alterações na responsividade do header */
+@media screen and (max-width: 626px) {
+    .header-menu {
+        display: block;
+    }
+
+    .header-img {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header-menu ol li {
+        text-align: center;
+    }
+    
+    .header-menu ol li:nth-child(2) {
+        margin-bottom: 1em;
+    }
+
+    .line::before {
+        left: .5em;
+    }
+
+    #tech-ab ol, #courses-cert ul, #projetos-extensao ul {
+        padding-left: 1.5em;
+    }
+}
