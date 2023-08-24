@@ -9,6 +9,20 @@
 
 :root {
     --azul: #0055a4;
+    --azul-b: #0055a4;
+    --preto: #000;
+    --branco: #fff;
+}
+
+[data-theme="dark"] {
+    --azul: #003465;
+    --azul-b: #65b5ff;
+    --preto: #fff;
+    --branco: #000;
+}
+
+body {
+    background-color: var(--branco);
 }
 
 /* HEADER */
@@ -16,6 +30,16 @@ header {
     padding: 1em 1em;
     background-color: var(--azul);
     color: #fff;
+}
+
+#theme {
+    float: right;
+    color: #000;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: #fff;
+    padding: .8em;
 }
 
 .header-img img { /* altera a imagem */
@@ -76,6 +100,7 @@ h1 { /* estiliza todos os h1s */
 }
 
 p { /* estiliza todos os parágrafos */
+    color: var(--preto);
     text-indent: 30px;
     text-align: justify;
     font-size: 1.2em;
@@ -83,6 +108,7 @@ p { /* estiliza todos os parágrafos */
 
 /* retira os pontos da lista e altera o tamanho da fonte */
 #tech-ab li, #courses-cert li, #projetos-extensao li {
+    color: var(--preto);
     list-style-type: none;
     font-size: 1.2em;
     
@@ -96,19 +122,19 @@ p { /* estiliza todos os parágrafos */
 /* altera o hyperlink da seção projetos de extensão */
 #projetos-extensao a {
     text-decoration: none;
-    color: var(--azul);
+    color: var(--azul-b);
     font-weight: bold;
 }
 
 /* estiliza a tag dd para o texto ir para cima */
 dd {
-    color: var(--azul);
+    color: var(--azul-b);
     font-weight: bold;
     margin-bottom: 1em;
 }
 
 strong, b {
-    color: var(--azul);
+    color: var(--azul-b);
 }
 
 /* classe que contém todas as listas */
@@ -128,8 +154,25 @@ strong, b {
     left: 2em;
 }
 
+/* estiliza a scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+    background-color: rgb(200, 200, 200);
+    border: 5px solid var(--branco);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #1e90ff;
+    border-radius: 50px;
+    border: 2px solid var(--branco);
+}
+
 /* faz pequenas alterações na responsividade do header */
 @media screen and (max-width: 626px) {
+    #theme {
+        margin-bottom: -20em;
+    }
+
     .header-menu {
         display: block;
     }
