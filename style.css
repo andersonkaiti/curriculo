@@ -21,6 +21,16 @@
     --branco: #000;
 }
 
+.init-hidden {
+    opacity: 0;
+    transition: .5s;
+}
+
+.init-hidden-off {
+    opacity: 1;
+    transition: .5s;
+}
+
 body {
     background-color: var(--branco);
 }
@@ -55,18 +65,18 @@ header {
     align-items: center;
 }
 
-.header-menu nav ol { /* retira a ordenação e aumenta a fonte para 1.5em */
+.header-menu nav ul { /* retira a ordenação e aumenta a fonte para 1.5em */
     list-style-type: none;
     font-size: 1.5em;
 }
 
-.header-menu nav ol li:first-child { /* configura o primeiro elemento da lista */
+.header-menu nav ul li:first-child { /* configura o primeiro elemento da lista */
     font-size: 1.5em;
     font-weight: bold;
     font-family: 'Montserrat', sans-serif;
 }
 
-.header-menu nav ol li:nth-child(2) { /* configura o segundo elemento da lista */
+.header-menu nav ul li:nth-child(2) { /* configura o segundo elemento da lista */
     font-size: .8em;
     font-weight: bold;
     font-family: 'Montserrat', sans-serif;
@@ -115,12 +125,13 @@ p { /* estiliza todos os parágrafos */
 }
 
 /* empurra toda a lista para a direita */
-#tech-ab ol, #courses-cert ul, #projetos-extensao ul {
+#tech-ab ul, #courses-cert ul, #projetos-extensao ul {
     padding-left: 3em;
 }
 
 /* altera o hyperlink da seção projetos de extensão */
-#projetos-extensao a {
+#projetos-extensao a,
+#courses-cert a {
     text-decoration: none;
     color: var(--azul-b);
     font-weight: bold;
@@ -184,11 +195,11 @@ strong, b {
         align-items: center;
     }
 
-    .header-menu ol li {
+    .header-menu ul li {
         text-align: center;
     }
     
-    .header-menu ol li:nth-child(2) {
+    .header-menu ul li:nth-child(2) {
         margin-bottom: 1em;
     }
 
@@ -196,7 +207,7 @@ strong, b {
         left: .5em;
     }
 
-    #tech-ab ol, #courses-cert ul, #projetos-extensao ul {
+    #tech-ab ul, #courses-cert ul, #projetos-extensao ul {
         padding-left: 1.5em;
     }
 }
